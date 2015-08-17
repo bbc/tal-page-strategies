@@ -1,0 +1,25 @@
+{
+  "name": "tal-page-strategies",
+  "version": "1.0.0",
+  "description": "Page Strategies for BBC TAL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmtvp/tal-page-strategies"
+  },
+  "keywords": [
+    "BBC",
+    "TAL",
+    "Page",
+    "strategies"
+  ],
+  "author": "British Broadcasting Corporation",
+  "license": "Apache v2.0",
+  "bugs": {
+    "url": "https://github.com/fmtvp/tal-page-strategies/issues"
+  },
+  "homepage": "https://github.com/fmtvp/tal-page-strategies"
+}
