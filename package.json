@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Page Strategies for BBC TAL",
   "main": "index.js",
+  "directories": {
+    "default": "./default",
+    "hbbtv": "./hbbtv",
+    "html5hbbtvhybrid": "./html5hbbtvhybrid",
+    "htmlbroadcastvideo": "./htmlbroadcastvideo",
+    "samsungmaple": "./samsungmaple"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
