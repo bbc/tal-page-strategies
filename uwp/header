@@ -1,14 +1,16 @@
 <script type="text/javascript">
+  if (typeof Windows !== "undefined") {
 
-  // The gamepadInputEmulation is a string property that exists in JavaScript UWAs and in WebViews in UWAs.
-  if (window.navigator && typeof window.navigator.gamepadInputEmulation === "string") {
-    window.navigator.gamepadInputEmulation = "keyboard";
+    // The gamepadInputEmulation is a string property that exists in JavaScript UWAs and in WebViews in UWAs.
+    if (window.navigator && typeof window.navigator.gamepadInputEmulation === "string") {
+      window.navigator.gamepadInputEmulation = "keyboard";
+    }
+
+    // Disable scaling
+    Windows.UI.ViewManagement.ApplicationViewScaling.trySetDisableLayoutScaling(true);
+
+    // Disable overscan border, allowing our app to draw to the edge of the screen
+    Windows.UI.ViewManagement.ApplicationView.getForCurrentView().setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
+
   }
-
-  // Disable scaling
-  Windows.UI.ViewManagement.ApplicationViewScaling.trySetDisableLayoutScaling(true);
-
-  // Disable overscan border, allowing our app to draw to the edge of the screen
-  Windows.UI.ViewManagement.ApplicationView.getForCurrentView().setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
-
-</script> 
+</script>
