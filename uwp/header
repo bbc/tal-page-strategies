@@ -12,5 +12,10 @@
     // Disable overscan border, allowing our app to draw to the edge of the screen
     Windows.UI.ViewManagement.ApplicationView.getForCurrentView().setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
 
+    // Store the deeplink arguments since our app launches too late to capture the event elsewhere
+    Windows.UI.WebUI.WebUIApplication.addEventListener("activated", function (args) {
+      window.deeplinkArgs = args;
+    });
+
   }
 </script>
