@@ -1,5 +1,13 @@
 <script type='text/javascript'>
   function accessfunction(json) {
-    require('antie/application').getCurrentApplication().getDevice().nativeCallback(json);
+    try {
+      require('antie/application').getCurrentApplication().getDevice().nativeCallback(json);
+    }
+    catch (ex) {
+      if (typeof window.postMessage === 'function') {
+          var data = JSON.parse(json);
+          window.postMessage(data, '*');
+      }
+    }
   }
 </script>
