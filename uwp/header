@@ -12,19 +12,10 @@
     // Disable overscan border, allowing our app to draw to the edge of the screen
     Windows.UI.ViewManagement.ApplicationView.getForCurrentView().setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
 
+    // Map any activated events to message events
     Windows.UI.WebUI.WebUIApplication.addEventListener("activated", function (args) {
-      if (args.kind === Windows.ApplicationModel.Activation.ActivationKind.protocol) {
-        var uri = args.detail[0].uri.rawUri;
-        var pid = uri.match(/contentId=(\w+)/)[1];
-
-        if (pid) {
-          var historyString = '#&*history=' + location.href.split('#')[0];
-          location.hash = historyString;
-
-          var newQueryString = location.search ? location.search + '&' : '?';
-          newQueryString += 'deeplink=tv/playback/' + pid;
-          location.search = newQueryString;
-        }
+      if (typeof window.postMessage === 'function') {
+        window.postMessage(args, '*')
       }
     });
   }
