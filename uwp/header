@@ -15,7 +15,7 @@
     // Map any activated events to message events
     Windows.UI.WebUI.WebUIApplication.addEventListener("activated", function (args) {
       if (typeof window.postMessage === 'function') {
-        window.postMessage(args, '*')
+        window.postMessage(args, '*');
       }
     });
   }
