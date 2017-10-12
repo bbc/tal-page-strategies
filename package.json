@@ -1,6 +1,6 @@
 {
   "name": "tal-page-strategies",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Page Strategies for BBC TAL",
   "main": "index.js",
   "directories": {
