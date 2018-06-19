@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fmtvp/tal-page-strategies"
+    "url": "https://github.com/bbc/tal-page-strategies"
   },
   "keywords": [
     "BBC",
@@ -27,9 +27,9 @@
   "author": "British Broadcasting Corporation",
   "license": "Apache v2.0",
   "bugs": {
-    "url": "https://github.com/fmtvp/tal-page-strategies/issues"
+    "url": "https://github.com/bbc/tal-page-strategies/issues"
   },
-  "homepage": "https://github.com/fmtvp/tal-page-strategies",
+  "homepage": "https://github.com/bbc/tal-page-strategies",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-bump": "^0.8.0",
