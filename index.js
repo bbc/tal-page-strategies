@@ -1,6 +1,6 @@
 var fs = require('fs')
 
-function getPageStrategyElement: function(pageStrategy, element) {
+function getPageStrategyElement (pageStrategy, element) {
     if (!fs.existsSync(__dirname + '/' + pageStrategy + '/' + element)) {
         return {
             noSuchStrategy: "file does not exist: " + __dirname + '/' + pageStrategy + '/' + element
