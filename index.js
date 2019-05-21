@@ -16,7 +16,7 @@ function getOrDefault (strategyName, element) {
   var strategy = getPageStrategyElement(strategyName, element)
 
   if (strategy.noSuchStrategy) {
-    return talPageStrategies.getPageStrategyElement('default', element)
+    return getPageStrategyElement('default', element)
   }
   return strategy
 }
