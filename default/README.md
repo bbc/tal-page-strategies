@@ -3,4 +3,4 @@ This folder contains the default page strategy, including:
 * doctype `<!DOCTYPE html>``
 * header (empty)
 * mimetype `text/html`
-* rootelement `<html>`
+* rootelement `<html lang="en">`
