@@ -1,6 +1,6 @@
 <object id="appmgr" type="application/oipfApplicationManager" style="position: absolute; width: 0; height: 0; visibility:hidden;"></object>
-<object id="oipfcap" type="application/oipfCapabilities" style="width: 0px; height: 0px; display: none;"></object>
-<object id="oipfcfg" type="application/oipfConfiguration" style="width: 0px; height: 0px; display: none;"></object>
+<object id="oipfcap" type="application/oipfCapabilities" style="width: 0px; height: 0px; display:none;"></object>
+<object id="oipfcfg" type="application/oipfConfiguration" style="width: 0px; height: 0px; display:none;"></object>
 
 <script type="text/javascript" language="javascript">
 //<![CDATA[
