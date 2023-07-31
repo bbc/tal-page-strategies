@@ -1,0 +1,22 @@
+<div style="position: absolute; width: 0; height: 0; visibility: hidden;">
+	<object id="appmgr" type="application/oipfApplicationManager"></object>
+	<object id="oipfcap" type="application/oipfCapabilities" ></object>
+	<object id="oipfcfg" type="application/oipfConfiguration"></object>
+</div>
+
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+	try {
+    var appMgr = document.getElementById('appmgr');
+    var app = appMgr.getOwnerApplication(document);
+		if (app) {
+			app.show();
+			app.privateData.keyset.setValue(0x3FF);
+		}
+	} catch (e) {
+    // this is not a HbbTV client
+  }
+//]]>
+</script>
+
+<object id="broadcastVideoObject" type="video/broadcast" style="position: absolute; width: 0px; height: 0px; visibility:hidden;"></object>
