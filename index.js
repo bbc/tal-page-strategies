@@ -1,9 +1,19 @@
 var fs = require('fs')
 
+function isInvalidStrategy(pageStrategy) {
+  const allowedStrategies = /(deafult)|(hbbtv)|(hbbtv2)|(html5hbbtvhybrid)|(html5hbbtvhybridappshow)|(htmlbroadcastvideo)|(playstation3)|(samsungmaple)|(samsungstreaming)|(uwp)/
+  return pageStrategy && !pageStrategy.match(allowedStrategies)
+}
+
+function isInvalidElement(element) {
+  const allowedElements = /(body)|(doctype)|(header)|(mimetype)|(rootelement)/
+  return element && !element.match(allowedElements)
+}
+
 function getPageStrategyElement (pageStrategy, element) {
-    if (!fs.existsSync(__dirname + '/' + pageStrategy + '/' + element)) {
+    if (!fs.existsSync(__dirname + '/' + pageStrategy + '/' + element) || isInvalidStrategy(pageStrategy) || isInvalidElement(element)) {
         return {
-            noSuchStrategy: "file does not exist: " + __dirname + '/' + pageStrategy + '/' + element
+            noSuchStrategy: "file does not exist or is not allowed: " + __dirname + '/' + pageStrategy + '/' + element
         }
     }
     var pageStrategyPath = __dirname + '/' + pageStrategy + '/' + element;
