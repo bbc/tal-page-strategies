@@ -1,7 +1,7 @@
 var fs = require('fs')
 
 function isInvalidStrategy(pageStrategy) {
-  const allowedStrategies = /(deafult)|(hbbtv)|(hbbtv2)|(html5hbbtvhybrid)|(html5hbbtvhybridappshow)|(htmlbroadcastvideo)|(playstation3)|(samsungmaple)|(samsungstreaming)|(uwp)/
+  const allowedStrategies = /(default)|(hbbtv)|(hbbtv2)|(html5hbbtvhybrid)|(html5hbbtvhybridappshow)|(htmlbroadcastvideo)|(playstation3)|(samsungmaple)|(samsungstreaming)|(uwp)/
   return pageStrategy && !pageStrategy.match(allowedStrategies)
 }
 
